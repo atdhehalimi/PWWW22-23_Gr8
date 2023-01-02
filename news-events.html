@@ -5,59 +5,287 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            }
+
+
+    .container {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    header {
+        background-color: #02002e;
+    }
+
+    header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .container nav{
+        display: flex;
+        gap: 20px;
+    }
+
+    header .container nav ul li{
+        list-style: none;
+    }
+
+    header .container nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+
+    section#news .container {
+        margin-top: 100px;
+    }
+
+    section#news .container hgroup{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    hgroup h2{
+        font-size: 34px;
+    }
+
+    hgroup button {
+        width: 100px;
+        background-color: transparent;
+        border: 2px solid rgb(207, 206, 206);
+        color: lightblue;
+    }
+
+    .news {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .news-card {
+        display: flex;
+        padding: 20px;
+        border-bottom: 2px solid rgb(207, 206, 206);
+    }
+    
+    .card-img img{
+        width: 120px;
+        margin-right: 10px;
+    }
+
+    .card-text h3{
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .card-text p{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    #events .container {
+        margin-bottom: 100px;
+    }
+
+    #events .container hgroup {
+        margin-top: 100px;
+    }
+
+    .events {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .event {
+        border: 2px solid rgb(193, 192, 192);
+        padding: 10px;
+    }
+
+    .date{
+        margin: 0 auto;
+        width: 50px;
+
+        text-align: center;
+        border: 1px solid gray;
+        padding: 10px;
+    }
+
+    .date h3 {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .date span{
+        font-size: 24px;
+    }
+
+    .txt h5{
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .txt h3 {
+        margin-top: 20px;
+    }
+
+    footer{
+        color: white;
+        background-color: #02002e;
+        padding: 60px;
+        text-align: center;
+    }
+
+    </style>
 </head>
+
+
 <body>
 
-    <section id="konkurset">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <nav>
+                <ul><li><a href="./index.html">Home</a></li></ul>
+                <ul><li><a href="./employes.html">About</a></li></ul>
+                <ul><li><a href="./services.html">Services</a></li></ul>
+                <ul><li><a href="./news-events.html">News</a></li></ul>
+                <ul><li><a href="./Awards.html">Awards</a></li></ul>
+                <ul><li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li></ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="news">
         <div class="container">
             <hgroup>
-                <h3>Konkurset</h3>
-                <h2>Hapem konkurset per pranimin ne poziten menagjeriale</h2>
-                <h3>4 tetor, 1999</h3>
+                <h2>News</h2>
+                <button class="see-all">See all</button>
             </hgroup>
-            <div class="konkurset-photo">
-
-            </div>
-            <div class="konkurset text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eius ex aspernatur fugiat ad tempora tempore asperiores maxime exercitationem ratione impedit vitae at cupiditate, quo, inventore quis reiciendis, illum deserunt?</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio mollitia quod laudantium ducimus molestias veritatis, adipisci numquam totam tenetur voluptatum ex porro quis nostrum nihil alias sequi. Distinctio, aspernatur tempora!</p>
+    
+            <div class="news">
+                <div class="news-card">
+                    <div class="card-img">
+                        <img src="./assets/images/office-work.jpeg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>Report out Conoso brand loyalty</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                        <h3><span>Atdhe Halimi</span>1 day ago</h3>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="card-img">
+                        <img src="./assets/images/office-work.jpeg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>Report out Conoso brand loyalty</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                        <h3><span>Atdhe Halimi</span>1 day ago</h3>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="card-img">
+                        <img src="./assets/images/office-work.jpeg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>Report out Conoso brand loyalty</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <h3><span>Atdhe Halimi</span>1 day ago</h3>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="card-img">
+                        <img src="./assets/images/office-work.jpeg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>Report out Conoso brand loyalty</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. sit amet consectetur adipisicing elit. </p>
+                        <h3><span>Atdhe Halimi</span>1 day ago</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="konkurset">
+    <section id="events">
         <div class="container">
             <hgroup>
-                <h3>Konkurset</h3>
-                <h2>Hapem konkurset per pranimin ne poziten menagjeriale</h2>
-                <h3>4 tetor, 1999</h3>
+                <h2>Upcoming events</h2>
             </hgroup>
-            <div class="konkurset-photo">
-
-            </div>
-            <div class="konkurset text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eius ex aspernatur fugiat ad tempora tempore asperiores maxime exercitationem ratione impedit vitae at cupiditate, quo, inventore quis reiciendis, illum deserunt?</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio mollitia quod laudantium ducimus molestias veritatis, adipisci numquam totam tenetur voluptatum ex porro quis nostrum nihil alias sequi. Distinctio, aspernatur tempora!</p>
+            <div class="events">
+                <div class="event">
+                    <div class="date">
+                        <h3>apr</h3>
+                        <span>228</span>
+                    </div>
+                    <div class="txt">
+                        <h5>Countine market research</h5>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <h5>Friday, 2:00 - 4:30 pm</h5>
+                        <h5>Chief room 144343</h5>
+                        <span>Add to Outlook</span>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="date">
+                        <h3>apr</h3>
+                        <span>228</span>
+                    </div>
+                    <div class="txt">
+                        <h5>Countine market research</h5>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <h5>Friday, 2:00 - 4:30 pm</h5>
+                        <h5>Chief room 144343</h5>
+                        <span>Add to Outlook</span>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="date">
+                        <h3>apr</h3>
+                        <span>228</span>
+                    </div>
+                    <div class="txt">
+                        <h5>Countine market research</h5>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <h5>Friday, 2:00 - 4:30 pm</h5>
+                        <h5>Chief room 144343</h5>
+                        <span>Add to Outlook</span>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="date">
+                        <h3>apr</h3>
+                        <span>228</span>
+                    </div>
+                    <div class="txt">
+                        <h5>Countine market research</h5>
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <h5>Friday, 2:00 - 4:30 pm</h5>
+                        <h5>Chief room 144343</h5>
+                        <span>Add to Outlook</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="konkurset">
-        <div class="container">
-            <hgroup>
-                <h3>Konkurset</h3>
-                <h2>Hapem konkurset per pranimin ne poziten menagjeriale</h2>
-                <h3>4 tetor, 1999</h3>
-            </hgroup>
-            <div class="konkurset-photo">
-
-            </div>
-            <div class="konkurset text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eius ex aspernatur fugiat ad tempora tempore asperiores maxime exercitationem ratione impedit vitae at cupiditate, quo, inventore quis reiciendis, illum deserunt?</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio mollitia quod laudantium ducimus molestias veritatis, adipisci numquam totam tenetur voluptatum ex porro quis nostrum nihil alias sequi. Distinctio, aspernatur tempora!</p>
-            </div>
-        </div>
-    </section>
+    <footer>
+        Copyright &copy; All rights reserved
+    </footer>
     
 </body>
 </html>
