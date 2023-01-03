@@ -7,12 +7,27 @@
     <title>Events</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;1,400&family=Nothing+You+Could+Do&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,700;1,500&display=swap" rel="stylesheet">
+
 
     <style>
+        @font-face {
+            font-family: "Trickster";
+            src: local("Trickster"),
+                url("trickster-COLRv1.otf") format("opentype");
+            }
+
         *{
             margin: 0;
             padding: 0;
-            }
+            
+            font-family: 'Playfair Display', serif;
+        }
+
+        a{
+            text-decoration: none;
+        }
 
 
     .container {
@@ -125,6 +140,7 @@
         font-size: 24px;
         text-transform: uppercase;
         margin-bottom: 10px;
+        font-family: "Trickster";;
     }
 
     .date span{
@@ -156,7 +172,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="./assets/images/logo.png" alt="">
+                <img src="./assets/images/logo.png" alt="logoja">
             </div>
             <nav>
                 <ul><li><a href="./index.html">Home</a></li></ul>
@@ -173,7 +189,7 @@
         <div class="container">
             <hgroup>
                 <h2>News</h2>
-                <button class="see-all">See all</button>
+                <button class="see-all"><a href="https://www.reddit.com/r/newworldgame/" target="_blank">See all</a></button>
             </hgroup>
     
             <div class="news">
@@ -284,7 +300,7 @@
     </section>
 
     <footer>
-        Copyright &copy; All rights reserved
+        Copyright &copy; T&#235; gjitha t&#235; drejtat t&#235; rezervuara. 
     </footer>
     
 </body>
