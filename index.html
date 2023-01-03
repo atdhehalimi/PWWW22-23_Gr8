@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWWW_2022_23_Gr8</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/style.css">
 </head>
-
 <body>
 
     <header>
@@ -21,24 +17,12 @@
                 <img src="./assets/images/logo.png" alt="">
             </div>
             <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./employes.html">About</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./services.html">Services</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./news-events.html">News</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./Awards.html">Awards</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                </ul>
+                <ul><li><a href="./index.html">Home</a></li></ul>
+                <ul><li><a href="./employes.html">About</a></li></ul>
+                <ul><li><a href="#services">Services</a></li></ul>
+                <ul><li><a href="./news-events.html">News</a></li></ul>
+                <ul><li><a href="./Awards.html">Awards</a></li></ul>
+                <ul><li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li></ul>
             </nav>
         </div>
     </header>
@@ -65,36 +49,30 @@
             <div class="card">
                 <i class="fa-solid fa-chart-simple"></i>
                 <h2>Bussines Consulting</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur
-                    adipisicing elit</p>
-                <button>Read more</button>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                <button><a href="./services.html">Read more</a></button>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-chart-simple"></i>
+            <div class="card">  
+                <i class="fa-solid fa-chart-simple"></i>          
                 <h2>Lawyer Consulting</h2>
-
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lawyer Consulting ipsum dolor sit amet
-                    consectetur adipisicing elit
-                <p>
-                    <button class="wrong">Read more</button>
+        
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lawyer Consulting ipsum dolor sit amet consectetur adipisicing elit<p>
+                <button class="wrong"><a href="./services.html">Read more</a></button>
             </div>
 
-            <div class="card">
-                <i class="fa-solid fa-chart-simple"></i>
-                <h2>Lawyer Consulting</h2>
-
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lawyer Consulting ipsum dolor sit amet
-                    consectetur adipisicing elit
-                <p>
-                    <button class="wrong">Read more</button>
+            <div class="card">  
+                <i class="fa-solid fa-chart-simple"></i>          
+                <h2>Online Consulting</h2>
+        
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lawyer Consulting ipsum dolor sit amet consectetur adipisicing elit<p>
+                <button class="wrong"><a href="./services.html">Read more</a></button>
             </div>
 
-            <div class="card">
-                <i class="fa-solid fa-chart-simple"></i>
+            <div class="card">  
+                <i class="fa-solid fa-chart-simple"></i>  
                 <h2>IT Menagment</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur
-                    adipisicing elit</p>
-                <button>Read more</button>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lawyer Consulting ipsum dolor sit amet consectetur adipisicing elit</p>
+                <button><a href="./services.html">Read more</a></button>
             </div>
 
         </div>
@@ -103,34 +81,56 @@
     <section id="photos">
         <div class="container">
             <div class="bottom">
-                <ul>
-                    <li><a href="#" class="active">WordPress</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Branding</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Statistics</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Ecomerce</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Photography</a></li>
-                </ul>
+                <button class="tab-btn active" data-id="wordpress">WordPress</button>
+                <button class="tab-btn" data-id="branding">Branding</button>
+                <button class="tab-btn" data-id="statistics">Statistics</button>
+                <button class="tab-btn" data-id="e-comerce">Ecomerce</button>
+                <button class="tab-btn" data-id="photography">Photography<button>
             </div>
-            <div class="images">
-                <img src="./assets/images/01.png" alt="">
-                <img src="./assets/images/02.png" alt="">
-                <img src="./assets/images/03.png" alt="">
-                <img src="./assets/images/04.png" alt="">
-                <img src="./assets/images/05.png" alt="">
-                <img src="./assets/images/06.png" alt="">
+            <div class="images-content">
+                <div class="images active" id="wordpress">
+                    <img src="./assets/images/01.png" alt="">
+                    <img src="./assets/images/02.png" alt="">
+                    <img src="./assets/images/06.png" alt="">
+                    <img src="./assets/images/05.png" alt="">
+                    <img src="./assets/images/04.png" alt="">
+                    <img src="./assets/images/03.png" alt="">
+                </div>
+                <div class="images" id="branding">
+                    <img src="./assets/images/06.png" alt="">
+                    <img src="./assets/images/05.png" alt="">
+                    <img src="./assets/images/03.png" alt="">
+                    <img src="./assets/images/02.png" alt="">
+                    <img src="./assets/images/01.png" alt="">
+                </div>
+                <div class="images" id="statistics">
+                    <img src="./assets/images/statistics/1.png" alt="">
+                    <img src="./assets/images/statistics/2.jpeg" alt="">
+                    <img src="./assets/images/statistics/3.jpeg" alt="">
+                    <img src="./assets/images/statistics/4.jpeg" alt="">
+                    <img src="./assets/images/statistics/5.jpg" alt="">
+                </div>
+                <div class="images" id="e-comerce">
+                    <img src="./assets/images/01.png" alt="">
+                    <img src="./assets/images/e-comerce/05.jpg" alt="">
+                    <img src="./assets/images/e-comerce/02.jpg" alt="">
+                    <img src="./assets/images/e-comerce/05.jpg" alt="">
+                    <img src="./assets/images/e-comerce/02.jpg" alt="">
+                    <img src="./assets/images/e-comerce/05.jpg" alt="">
+                </div>
+                <div class="images" id="photography">
+                    <img src="./assets/images/photography/93214c249c5baf746c7c139fba0c3003.jpg" alt="">
+                    <img src="./assets/images/photography/9738dbefb3d9a90a7456cb9a5b2f0c77.jpg" alt="">
+                    <img src="./assets/images/04.png" alt="">
+                    <img src="./assets/images/03.png" alt="">
+                    <img src="./assets/images/05.png" alt="">
+                    <img src="./assets/images/06.png" alt="">
+                </div>
+            </div>
 
-            </div>
             <div class="button">
-                <button>
-                    VIEW MORE
+                <button class="view-more">
+                    <a href="https://templatesjungle.com/" >View more</a>
                 </button>
             </div>
         </div>
@@ -140,9 +140,7 @@
         <div class="container">
             <div class="test">
                 <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt quam quasi. Assumenda ipsa
-                    est aperiam minus quas, ut ab deleniti quaerat, iusto voluptas officia totam aspernatur nisi dicta
-                    ad?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt quam quasi. Assumenda ipsa est aperiam minus quas, ut ab deleniti quaerat, iusto voluptas officia totam aspernatur nisi dicta ad?
                 </blockquote>
                 <div class="author">
                     <img src="./assets/images/R.jpeg" alt="">
@@ -154,9 +152,7 @@
             </div>
             <div class="test">
                 <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt quam quasi. Assumenda ipsa
-                    est aperiam minus quas, ut ab deleniti quaerat, iusto voluptas officia totam aspernatur nisi dicta
-                    ad?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt quam quasi. Assumenda ipsa est aperiam minus quas, ut ab deleniti quaerat, iusto voluptas officia totam aspernatur nisi dicta ad?
                 </blockquote>
                 <div class="author">
                     <img src="./assets/images/R.jpeg" alt="">
@@ -168,7 +164,7 @@
             </div>
         </div>
     </section>
-
+    
     <section id="prices">
         <div class="container">
             <div class="header">
@@ -203,11 +199,11 @@
                         <button class="btnn">Purchase now</button>
                     </div>
                 </div>
-
+    
                 <div class="price-table middle">
                     <div class="bottom-part">
                         <div class="middle price">
-                            <div class="price bottom">
+                            <div class="price bottom" >
                                 <span>$</span>
                                 <h1>10.00</h1>
                             </div>
@@ -226,7 +222,7 @@
                         <button class="btnn-middle">Purchase now</button>
                     </div>
                 </div>
-
+    
                 <div class="price-table a">
                     <div class="bottom-part">
                         <div class="price anash">
@@ -272,8 +268,7 @@
                     </div>
                     <div class="card-content">
                         <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quasi dignissimos cum illo.
-                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quasi dignissimos cum illo.</p>
                     </div>
                     <div class="card-buttons">
                         <button>2132212</button>
@@ -286,8 +281,7 @@
                     </div>
                     <div class="card-content">
                         <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quasi dignissimos cum illo.
-                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quasi dignissimos cum illo.</p>
                     </div>
                     <div class="card-buttons">
                         <button>2132212</button>
@@ -300,8 +294,7 @@
                     </div>
                     <div class="card-content">
                         <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quasi dignissimos cum illo.
-                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quasi dignissimos cum illo.</p>
                     </div>
                     <div class="card-buttons">
                         <button>2132212</button>
@@ -324,8 +317,6 @@
         </div>
     </section>
 
-
-
     <section id="contact">
         <div class="container">
             <div class="contact-form">
@@ -335,31 +326,53 @@
                         <input type="name" class="name" name="name" placeholder="First Name">
                         <input type="name" class="name" name="name" placeholder="Last Name">
                         <input type="name" class="name" name="name" placeholder="Email">
+                        <input type="password" class="pasword" name="password" placeholder="Password">
                     </div>
                     <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
                     <div class="form-btn">
                         <button>Send</button>
+                    </div>
+                    <div class="checkbox">
+                        <div>
+                            <label for="#">A deshironi te merrni email-a tjera?</label>
+                            <br>
+                              <input type="radio" id="html" name="fav_language" value="HTML">
+                              <label for="html">Po</label><br>
+                              <input type="radio" id="css" name="fav_language" value="CSS">
+                              <label for="css">Jo</label><br>
+                        </div>
+
+                    
+                        <div>
+                            <label for="#">Ku dëshironi ti merrni infotmatat</label>
+                        <br>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1">Postë</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2">Gmail</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> Outlook</label><br>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
         <div class="c-icons">
             <div>
-                <i class="fa-solid fa-envelope"></i>
-                INFO.WEPRO@INFO.COM
+                <a href="mailto:atdhehalimi@gmail.com"><i class="fa-solid fa-envelope" ></i></a>
+               <address> INFO.WEPRO@INFO.COM </address>
             </div>
             <div>
-                <i class="fa-solid fa-location-dot"></i>
+                <a href="https://www.google.com/maps"><i class="fa-solid fa-location"></i></a>
                 PROIN STR. 21 <br>
                 000020020020
             </div>
             <div>
-                <i class="fa-solid fa-phone"></i>
-                002212002432
+                <a href="tel:+383223232"><i class="fa-solid fa-phone"></i></a>
+                <abbr title="">002212002432</abbr>
             </div>
         </div>
     </section>
-
 
     <footer>
         <div class="container ">
@@ -371,7 +384,7 @@
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-youtube"></i>
+                <a href="./assets/pdf/Pershkrimi_Detyra_PWWW_2022_23_1672695171.pdf" target="_blank"><i class="fa-solid fa-file"></i></a>
             </div>
             <div class="pp">
                 <p style="color: lightgray;font-family:cursive;">Privacy Policy || Terms & Conditions</p>
@@ -379,6 +392,8 @@
         </div>
     </footer>
 
-</body>
 
-</html>F
+    <script src="app.js"></script>
+    
+</body>
+</html>

@@ -5,36 +5,240 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;1,400&family=Nothing+You+Could+Do&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,700;1,500&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        :root{
+            --p-color: rgb(165, 165, 165);
+            --h-color: rgb(77, 77, 77);
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            
+            font-family: 'Playfair Display', serif;
+        }
+
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #02002e;
+        }
+
+        header .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .container nav{
+            display: flex;
+            gap: 20px;
+        }
+
+        header .container nav ul li{
+            list-style: none;
+        }
+
+        header .container nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        section#business-consulting .container{
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        section#business-consulting .container .business{
+            padding: 20px;
+        }
+
+        .business h3{
+            font-size: 30px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: var(--h-color);
+        }
+
+        .business p{
+            margin-bottom: 10px;
+            color: var(--p-color);
+        }
+
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .buttons .button{
+            padding: 20px 10px;
+            background-color: gainsboro;
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons .button i{
+            font-size: 20px;
+            color: rgb(23, 23, 98);
+        }
+
+
+        section#lawyer-consulting .container{
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .lawyer {
+            padding: 20px;
+        }
+
+        .lawyer h2{
+            text-transform: uppercase;
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: var(--h-color);
+        }
+
+        .lawyer p {
+            color: var(--p-color);
+        }
+
+        .cases{
+            margin-top: 20px;
+        }
+
+        .case {
+            display: flex;
+            flex-direction: column;
+        }
+
+        meter {
+            width: 300px;
+            height: 15px;
+        }
+
+        section#it-menagment .container{
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .img img{
+            width: 100%;
+        }
+
+        .it{
+            padding: 20px;
+        }
+
+        .it h2{
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: var(--h-color);
+        }
+
+        .it p{
+            color: var(--p-color);
+        }
+
+        .it ul{
+            margin-top: 20px;
+        }
+
+        .it ul li{
+           list-style-type: circle; 
+           font-size: 20px;
+           margin-left: 20px;
+           color: rgb(91, 91, 91);
+        }
+
+        #iframes .container{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        #iframes .container iframe {
+            width: 100%;
+        }
+
+        #audio .container {
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+
+        footer{
+            color: white;
+            background-color: #02002e;
+            padding: 60px;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="title container">
-            Our Service
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <nav>
+                <ul><li><a href="./index.html">Home</a></li></ul>
+                <ul><li><a href="./employes.html">About</a></li></ul>
+                <ul><li><a href="./services.html">Services</a></li></ul>
+                <ul><li><a href="./news-events.html">News</a></li></ul>
+                <ul><li><a href="./Awards.html">Awards</a></li></ul>
+                <ul><li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li></ul>
+            </nav>
         </div>
     </header>
 
     <section id="business-consulting">
         <div class="container">
-            <div class="business-consulting-text">
+            <div class="business">
                 <h3>Bussines Consulting</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit alias, reiciendis, ex dolorem rem temporibus cupiditate, eveniet nihil eius.</p>
                 <div class="buttons">
                     <div class="button">
-                        <h3>Every problem solution</h3>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h4>Every problem solution</h4>
                     </div>
                     <div class="button">
-                        <h3>Every problem solution</h3>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h4>Every problem solution</h4>
                     </div>
                     <div class="button">
-                        <h3>Every problem solution</h3>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h4>Every problem solution</h4>
                     </div>
                     <div class="button">
-                        <h3>Every problem solution</h3>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h4>Every problem solution</h4>
                     </div>
                 </div>
             </div>
             <div class="business-consulting-photo">
-                <img src="#" alt="">
+                <img src="./assets/images/office-work.jpeg" alt="">
             </div>
         </div>
     </section>
@@ -43,9 +247,9 @@
     <section id="lawyer-consulting">
         <div class="container">
             <div class="lawyer-consulting-photo">
-                <img src="" alt="">
+                <img src="./assets/images/harvey.jpeg" alt="">
             </div>
-            <div class="lawyer-consulting-text">
+            <div class="lawyer">
                 <h2>Lawyer Consulting</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum assumenda, corrupti possimus provident enim dolor impedit aut sequi ratione quia fugit labore quas eius earum error consectetur deserunt officiis tempore.</p>
                 <div class="cases">
@@ -83,21 +287,59 @@
 
     <section id="it-menagment">
         <div class="container">
-            <div class="it-menagment-text">
+            <div class="it">
                 <h2>IT menagment</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit illum, voluptatem totam nisi praesentium odio eaque sint deserunt.</p>
+<<<<<<< HEAD
                 <ul>
                     <li>web development
 
+=======
+               <ul>
+                    <li>web development
+                        <dl> 
+                            <dt>php</dt>
+                            <dd>(A server side scripting language.)</dd> 
+                            <dt>javaScript</dt>
+                            <dd>(A client side scripting language.)</dd> 
+                            </dl>
+                    </li>                    
+>>>>>>> fb800fe7e7c469e176556c9e1df770523ab36c15
                     <li>game development</li>
                     <li>data base menagment</li>
 
                 </ul>
             </div>
-            <div class="it-menagment-img">
-                
+            <div class="img">
+                <img src="./assets/images/it.jpeg" alt="">
             </div>
         </div>
     </section>
+
+    <section id="iframes">
+        <div class="container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wlHrSZ7BVFI?start=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_WH6cbwZ5m8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kPxOKgkY_-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="audio">
+        <div class="container">
+            <audio controls >
+                <source src="./assets/audio/audio1.ogg" type="audio/ogg">
+                <source src="./assets/audio/audio1.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls >
+                <source src="./assets/audio/audio1.ogg" type="audio/ogg">
+                <source src="./assets/audio/audio2.mp3" type="audio/mpeg">
+              </audio>
+        </div>
+    </section>
+
+    <footer>
+        Copyright &copy; All rights reserved
+    </footer>
+    
 </body>
 </html>

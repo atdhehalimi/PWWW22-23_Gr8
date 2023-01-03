@@ -1,47 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-
+	
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emplyees</title>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;1,400&family=Nothing+You+Could+Do&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,700;1,500&display=swap" rel="stylesheet">
 
+
+    <style>
+
+        :root{
+            --p-color: rgb(165, 165, 165);
+            --h-color: rgb(77, 77, 77);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #02002e;
+        }
+
+        header .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .container nav{
+            display: flex;
+            gap: 20px;
+        }
+
+        header .container nav ul li{
+            list-style: none;
+        }
+
+        header .container nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .categories {
+            box-shadow: 0px 0px 5px 0px rgba(143, 113, 113, 0.75);
+        }
+
+        .categories .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 30px 0;
+        }
+
+
+        .categories .container button {
+            text-decoration: none;
+            color: rgb(165, 165, 165);
+            background-color: transparent;
+            border: 0;
+        }
+
+        .categories .container .active {
+            color: #02002e;
+            border-bottom: 1px solid #02002e;
+        }
+
+
+
+        .we {
+            font-size: 30px;
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            transform: rotate(270deg);
+            display: block;
+            text-shadow:-1px 10px 3px #857979;
+        }
+
+        .meet {
+            margin: 20px auto;
+            width: 210px;
+            text-transform: uppercase;
+            font-size: 16px;
+            color: #02002e;
+            border-bottom: 1px solid #02002e;;
+        }
+
+
+
+        section#workers section#punetoret #photo .content {
+            display: none;
+        }
+        
+        section#workers section#punetoret #photo .active{
+            display: flex;
+            gap: 70px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+
+        section#workers section#punetoret .container .paragrafi{
+            width: 60%;
+        }
+        
+        section#punetoret .container .paragrafi h1{
+            font-size: 32px;
+            color: var(--h-color);
+        }
+
+        section#punetoret .container .paragrafi p{
+            margin-top: 20px;
+            font-size: 18px;
+            color: var(--p-color);
+        }
+
+        section#punetoret .container .profilet img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        section#punetoret .container .profilet h3,
+        section#punetoret .container .profilet h1{
+            margin-bottom: 20px;
+
+        }
+
+        section#punetoret .container .profilet blockquote {
+            color: #464444;
+        }
+
+        footer{
+            color: white;
+            background-color: #02002e;
+            padding: 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+    
 <body>
 
-    <section id="Punetoret">
-        <div class="paragrafi">
-            <h1>Dental Awards & Recognition
-                Voted One of the “Top Dentists in Texas”</h1>
-            <p>Dr. Carlson has been voted by his peers as one of the Top Dentists in Texas and included in Texas Monthly
-                Super Dentists. He has also been chosen by other dentists in San Antonio as one of the top dentists in
-                San Antonio, as well as one of America’s Top Dentists. Dr. Carlson is honored by each accolade.</p>
+    <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="./assets/images/logo.png" alt="">
+                </div>
+                <nav>
+                    <ul><li><a href="./index.html">Home</a></li></ul>
+                    <ul><li><a href="./employes.html">About</a></li></ul>
+                    <ul><li><a href="./services.html">Services</a></li></ul>
+                    <ul><li><a href="./news-events.html">News</a></li></ul>
+                    <ul><li><a href="./Awards.html">Awards</a></li></ul>
+                    <ul><li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li></ul>
+                </nav>
+            </div>
+    </header>
 
-            <p> Craig Carlson, DDS has been recognized as one of the top San Antonio Dentistry practices.</p>
-
-            <p> View the gallery below to see some of his dental achievements: </p>
-        </div>
-       
-        <div class="profilet">
-            <h3>Meet the doctors</h3>
-            <h1>Mr peanut butter</h1>
+   <section id="workers">
+    <div class="categories">
+        <div class="container buttons">
             
-            <img src="" alt="">       
-            <blockquote>Jam punetor shume i mire, ju premtoj.</blockquote>
-
+            <button class="btn-link active" data-id="bussines">Bussines Consulting</button>
+            <button class="btn-link" data-id="lawyer">Lawyer Consulting</button>
+            <button class="btn-link" data-id="online">Online Consulting</button>
+            <button class="btn-link" data-id="it">IT Menagment</button>
+            
         </div>
+    </div>
+	
+    <section id="punetoret">
+            <p class="we">WE PRO. </p>
+            
+            <h3 class="meet">Meet the profesionist</h3>
+            <div id="photo">
+                <div class="content container active" id="bussines">
+                    <div class="paragrafi">
+                        <h1>Princess carolyn “Best cat in town”</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores repellat suscipit quos non explicabo ipsam? Iure mollitia doloribus earum debitis facere nobis dolor tenetur unde, nemo, sapiente tempora similique. Assumenda?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas provident fuga modi iusto placeat quam numquam error consectetur dolores, ad a aliquam, aut necessitatibus nobis facilis velit aspernatur voluptatibus </p>
+                    </div>
+                    <div class="profilet">
+                        <h1>Princess carolyn</h1>
+                        
+                        <img src="./assets/images/maca.jpg" alt=""> 
+                        <blockquote>Jam punetore shume e mire, ju premtoj.</blockquote> 
+                    </div>
+                </div>
+                <div class="content container" id="lawyer">
+                    <div class="paragrafi">
+                        <h1>Mr.Penaut Butter “Top Pros in Texas”</h1>
+                        <p>Dr. Carlson has been voted by his peers as one of the Top Dentists in Texas and included in Texas Monthly
+                        Super Dentists. He has also been chosen by other dentists in San Antonio as one of the top dentists in
+                        San Antonio, as well as one of America’s Top Dentists. Dr. Carlson is honored by each accolade.</p>
+                        <p> Craig Carlson, DDS has been recognized as one of the top San Antonio Dentistry practices.</p>
+                        <p> View the gallery below to see some of his dental achievements: </p>
+                    </div>
+                    <div class="profilet">
+                        <h1>Mr peanut butter</h1>
+                        
+                        <img src="./assets/images/dogi.jpg" alt=""> 
+                        <blockquote>Jam punetor shume i mire, ju premtoj.</blockquote> 
+                    </div>
+                </div>
+                <div class="content container" id="online">
+                    <div class="paragrafi">
+                        <h1>Diane Nguyen “The hottest girl”</h1>
+                        <p> Craig Carlson, DDS has been recognized as one of the top San Antonio Dentistry practices.</p>
+                        <p> View the gallery below to see some of his dental achievements.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas quia, quidem rerum molestiae adipisci, deserunt dolorem quas harum in atque voluptates, impedit expedita! Placeat illo, corporis laboriosam aspernatur velit voluptas!</p>
+                    </div>
+                    <div class="profilet">
+                        <h1>Diane Nguyen</h1>
+                        
+                        <img src="./assets/images/locka.jpg" alt=""> 
+                        <blockquote>Jam punetore shume e mire, ju premtoj.</blockquote> 
+                    </div>
+                </div>
+                <div class="content container" id="it">
+                    <div class="paragrafi">
+                        <h1> Bojack Horseman “Kali”</h1>
+                        <p> Considered discovered ye sentiments projecting entreaties of melancholy is. In expression an solicitude principles in do. Hard do me sigh with west same lady. Their saved linen downs tears son add music. Expression alteration entreaties mrs can terminated estimating. Her too add narrow having wished. To things so denied admire. Am wound worth water he linen at vexed.
 
-
-
-
-
+                            Building mr concerns servants in he outlived am breeding. He so lain good miss when sell some at if. Told hand so an rich gave next. How doubt yet again see son smart. While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old.</p>
+                    </div>
+                    <div class="profilet">
+                        <h1> Bojack Horseman</h1>
+                        
+                        <img src="./assets/images/kali.jpg" alt=""> 
+                        <blockquote>Jam punetor shume i mire, ju premtoj.</blockquote> 
+                    </div>
+                </div>
+            </div>
     </section>
+   </section>
+
+    <footer>
+        Copyright &copy; All rights reserved
+    </footer>
 
 
+    <script>
+        const btns = document.querySelectorAll(".btn-link")
+        const content = document.querySelectorAll(".content")
+        const workers = document.querySelector("#workers")
 
+        workers.addEventListener("click", function(p){
+            const id = p.target.dataset.id;
+            if(id){
+                btns.forEach(function(btn){
+                    btn.classList.remove("active");
+                    p.target.classList.add("active");
+                })
+                content.forEach(function(cnt){
+                    cnt.classList.remove("active");
+                })
+                const element = document.getElementById(id)
+                element.classList.add("active")
+            }
+        })
 
-
+    </script>
+        
+	
+	
+	
 </body>
-
+	
 </html>
