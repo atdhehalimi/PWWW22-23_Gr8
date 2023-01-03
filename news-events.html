@@ -156,6 +156,19 @@
         margin-top: 20px;
     }
 
+    #drag-drop .container {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    #div1 {
+        width: 350px;
+        height: 70px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
+
     footer{
         color: white;
         background-color: #02002e;
@@ -299,9 +312,54 @@
         </div>
     </section>
 
+    <section id="drag-drop">
+        <div class="container">
+            <p>Drag and drop:</p>
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <img id="drag1" src="./assets/images/logo.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+        </div>
+    </section>
+
     <footer>
         Copyright &copy; T&#235; gjitha t&#235; drejtat t&#235; rezervuara. 
+        <p>Data sot:</p>
+        <p id="date"></p>
+        <p>Math expressions</p>
+        <p id="math-ex"></p>
+        <p id="e"></p>
     </footer>
+
+    <script>
+        function allowDrop(ev) {
+        ev.preventDefault();
+        }
+
+        function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <script>
+        const d = new Date("2023-01-03");
+        document.getElementById("date").innerHTML = d;
+
+        const PI = 3.141592;
+        let b = Math.pow(PI, 3);
+
+        const e = 2.71828
+        let f = Math.trunc(e)
+        
+        document.getElementById("math-ex").innerHTML = b;
+        document.getElementById("e").innerHTML = f;
+
+    </script>
     
 </body>
 </html>
