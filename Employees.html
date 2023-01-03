@@ -146,11 +146,34 @@
             color: #464444;
         }
 
+        section#web-workers .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        section#web-workers .container h2{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        section#web-workers .container button {
+            width: 200px;
+            background-color: transparent;
+            padding: 20px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+
         footer{
             color: white;
             background-color: #02002e;
             padding: 60px;
             text-align: center;
+        }
+
+        footer form{
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -193,13 +216,13 @@
                 <div class="content container active" id="bussines">
                     <div class="paragrafi">
                         <h1>Princess carolyn “Best cat in town”</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores repellat suscipit quos non explicabo ipsam? Iure mollitia doloribus earum debitis facere nobis dolor tenetur unde, nemo, sapiente tempora similique. Assumenda?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas provident fuga modi iusto placeat quam numquam error consectetur dolores, ad a aliquam, aut necessitatibus nobis facilis velit aspernatur voluptatibus </p>
+                        <p id="match">Atdhe ipsum, dolor sit amet consectetur adipisicing elit. Maiores repellat suscipit quos non explicabo ipsam? Iure mollitia doloribus earum debitis facere nobis dolor tenetur unde, nemo, sapiente tempora similique. Assumenda?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas provident fuga modi iusto placeat quam numquam error consectetur dolores, ad a aliquam, aut necessitatibus nobis facilis velit aspernatur voluptatibus </p>
                     </div>
                     <div class="profilet">
                         <h1>Princess carolyn</h1>
                         
                         <img src="./assets/images/maca.jpg" alt=""> 
-                        <blockquote>Jam punetore shume e mire, ju premtoj.</blockquote> 
+                        <blockquote>Jam punetore shume e mire, ju premtoj.</blockquote>
                     </div>
                 </div>
                 <div class="content container" id="lawyer">
@@ -230,6 +253,7 @@
                         
                         <img src="./assets/images/locka.jpg" alt=""> 
                         <blockquote>Jam punetore shume e mire, ju premtoj.</blockquote> 
+                        <p id="year"></p>
                     </div>
                 </div>
                 <div class="content container" id="it">
@@ -250,8 +274,52 @@
     </section>
    </section>
 
+   <section id="web-workers">
+    <div class="container">
+        <h2>WEB WORKERS</h2>
+        <div id="supported"></div>
+        <div id="unsupported"></div>
+        <button onclick="worker();">click me</button>
+
+
+    </div>
+   </section>
+
     <footer>
         Copyright &copy; All rights reserved
+        <form action="/action_page.php" method="get">
+            <label for="browser">Jepni prefiksin:</label>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+              <option value="10000">
+              <option value="10000">
+              <option value="11000">
+              <option value="12000">
+              <option value="13000">
+              <option value="14000">
+              <option value="15000">
+              <option value="16000">
+            </datalist>
+            <input type="submit">
+          </form>
+          <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0<input type="range" id="a" value="50">100 +
+               <input type="number" id="b" value="25"> =
+                <output name="x" for="a b" class="output"></output>
+            </form>
+            <form action="/form/submit" method="get">
+                <keygen name="rsaPublicKey" keytype="RSA">
+                  Emri:
+                  <input type="text" name="usr_name">
+                  <input type="submit">
+              </form>
+              <p class="max-value">Numri me i madh ne JS: </p>
+
+
+
+                <p>Numri me i madh ne JavaScript:</p>
+
+                <p id="demo"></p>
     </footer>
 
 
@@ -276,9 +344,37 @@
         })
 
     </script>
+
+    <script>
+   function worker() 
+   {
+    if(typeof(Worker)!=="undefined"){
+     document.getElementById("supported").innerHTML="Puna me web-workers funksionin";
+      }
+     else
+      {
+      document.getElementById("unsupported").innerHTML="Not supporting";}
+   }
+    </script>
         
+    <script>
+            const maxValue = document.getElementById("demo");
+            maxValue.innerHTML = Number.MAX_VALUE;
+            const i = maxValue.toExponential();
+            const j = maxValue.toString()
+
+    </script>
 	
-	
+    <script>
+
+        var txt = "ne vitin 2023"
+        var rezult = txt.match("2023")
+
+        document.getElementById("year").innerHTML = rezult;
+
+        let a = document.getElementById("match").innerHTML;
+        document.getElementById("match").innerHTML = a.replace("Atdhe", "Lorem");
+    </script>
 	
 </body>
 	
