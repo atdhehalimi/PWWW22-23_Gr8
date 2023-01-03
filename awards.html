@@ -1,86 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;1,400&family=Nothing+You+Could+Do&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,700;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #02002e;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .container nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header .container nav ul li {
+            list-style: none;
+        }
+
+        header .container nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        section#quote {
+            background-color: gray;
+        }
+
+        section#quote .container {
+            padding: 50px;
+        }
+
+        section#note{ 
+            
+            background-color: lightgray;
+        }
+
+        section#note .container .h1 {
+            font-size: 36px;
+            text-align: center;
+            padding-top: 40px;
+            color: rgb(58, 58, 58);
+
+        }
+
+        section#note .container .prices {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        section#note .container .prices .medals {
+            width: 30%;
+            padding: 50px;
+            margin-bottom: 80px;
+            
+            background-color: gray;
+        }
+
+        section#note .container .prices .medals i{
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        section#note .container .prices .medals span{
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        section#note .container .prices .medals h1 {
+            margin-top: 20px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        section#note .container .prices .medals h3{
+            color: white;
+            font-size: 14px;
+        }
+
+        #safety .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 100px;
+        }
+
+        #safety .container .img img {
+            width: 100%;
+        }
+
+        #safety .container .safety {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        #safety .container .safety h3 {
+            margin-bottom: 20px;
+        }
+
+        #safety .container .safety h1 {
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        #safety .container .safety p {
+            font-size: 18px;
+        }
+
+
+        #awards .container h1{
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        #additional .container .left,
+        #additional .container .right{
+            width: 80%;
+        }
+
+        #additional .container .left div,
+        #additional .container .right div{
+            margin-bottom: 40px;
+        }
+
+        #awards .container table{
+            padding-bottom: 20px;
+            width: 100%;
+            background-color: lightgrey;
+            padding: 70px;
+        }
+        
+        #awards .container table td{
+            padding-bottom: 20px;
+        }
+
+        footer{
+            color: white;
+            background-color: #02002e;
+            padding: 60px;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        canvas {
+            height: 100px;
+        }
+
+        svg{
+            height: 100px;
+        }
+
+        #myCanvas {
+            width: 100px;
+            height: 20px;
+        }
+    </style>
 </head>
+
 <body>
 
-        <header>
-                <div class="hTitulli">
-                   <h1> Cmimet & Mirenjohjet </h1>
-                </div>
-                <div class="hParagrafi">
-                    <p> At Sundt, our employee-owners are driven by a shared mission: to be the most skilled builder in America.
-                        We
-                        believe that skill is represented through the our numerous Build America awards, more than any other
-                        contractor in the nation and dozens of ENR Best Project wins.
-                    </p>
-                </div>
-            </header>
-        
-            <section id="bParagrafi">
-                <p>
-        
-                    Our employee-owners are among the best in the industry, many of whom have been honored as 40 Under 40
-                    honorees in their communities or by ENR, an industry-leading publication. These accomplishments reflect the
-                    skill and grit of our employee-owners and the commitment we have to fulfilling our mission.
-        
-                </p>
-            </section>
-        
-            <section id="newPz">
-                <div class="cmimi"></div>
-                <div class="cmimi"></div>
-                <div class="cmimi"></div>
-            </section>
-            <section id="bigPz">
-                <div class="photoPz">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption>
-                            AGC Awards
-                        </figcaption>
-        
-                    </figure>
-        
-                </div>
-        
-                <div class="paragraphPz">
-                    <h1>SAFETY FIRST</h1>
-                    <p>
-                        We’re proud to be the only company to be recognized as the “Nation’s Safest Contractor” twice by winning
-                        the Associated General Contractors (AGC) Grand Award for safety (2006 and 2016). We have earned more AGC
-                        Build America Awards than any other contractor in the world. Build America Awards represent the
-                        industry’s highest possible achievement for innovation, quality and excellence in client service.
-                    </p>
-                </div>
-        
-            </section>
-        
-            <section id="Additional Honors">
-        
-                <div class="additionalH">
-                    <div class="aName">Best Project –<br> Landscape/Urban Development</div>
-                    <div class="aGiver">Engineering News-Record Texas<br> & Louisiana</div>
-                    <div class="aMap">La Cantera Town Center Roads<br> and Parks</div>
-                    <div class="aPlace">San Antonio, TX></div>
-                    <div class="aYear">2022</div>
-                </div>
-        
-                <div class="additionalH">
-                    <div class="aName">Best Project –<br> Landscape/Urban Development</div>
-                    <div class="aGiver">Engineering News-Record Texas<br> & Louisiana</div>
-                    <div class="aMap">La Cantera Town Center Roads<br> and Parks</div>
-                    <div class="aPlace">San Antonio, TX></div>
-                    <div class="aYear">2022</div>
-                </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./employes.html">About</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./services.html">Services</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./news-events.html">News</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./Awards.html">Awards</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   
+    <section id="quote">
+        <div class="container">
+            <blockquote>
+                Our employee-owners are among the best in the industry, many of whom have been honored as 40 Under 40 honorees in their communities or by ENR, an industry-leading publication. These accomplishments reflect the skill and grit of our employee-owners and the commitment we have to fulfilling our mission.
+            </blockquote>
+        </div>
+    </section>
 
-        <div>push</div>
-        </section>
-        
+    <section id="note">
+        <div class="container">
+            <h1 class="h1">Noteworthy</h1>
+            <div class="prices">
+                <div class="medals">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>#67</span>
+                    <h1>100 LARGEST EMPLOYEE-OWNED COMPANIES</h1>
+                    <h3>National Center for Employee Ownership/October 2021</h3>
+                </div>
+                <div class="medals">
+                    <i class="fa-solid fa-medal"></i>
+                    <span>#61</span>
+                    <h1>ENGINEERING NEWS RECORD
+                        TOP 400 CONTRACTORS</h1>
+                    <h3>May 2022</h3>
+                </div>
+                <div class="medals">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>#67</span>
+                    <h1>“NATIONS SAFEST CONTRACTOR”
+                        WITH 2 AGC GRAND
+                        SAFETY AWARDS</h1>
+                    <h3>Associated General Contractors of America
+                        2006 / 2016</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="safety">
+        <div class="container">
+            <div class="img">
+                <img src="./assets/images/awards.png" alt="">
+            </div>
+            <div class="safety">
+                <h3>AGC Awards</h3>
+                <h1>SAFETY FIRST</h1>
+                <p>We’re proud to be the only company to be recognized as the “Nation’s Safest Contractor” twice by
+                    winning the Associated General Contractors (AGC) Grand Award for safety (2006 and 2016). We have
+                    earned more AGC Build America Awards than any other contractor in the world. Build America Awards
+                    represent the industry’s highest possible achievement for innovation, quality and excellence in
+                    client service.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards">
+        <div class="container">
+            <h1>Awards</h1>
+            <table cellspacing="50px" border="0">
+                <tr>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                    <td>
+                        <h3>Build Arizona Award</h3>
+                        <h3>AGC Arizona Chapter</h3>
+                        <p>Northwest Water and Wastewater Master Plan Package 3A
+                            New Construction, Public, Over $50 Million Category
+                            Phoenix, AZ</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <canvas id="myCanvas" width="20" height="10"
+            style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+
+            <!-- <canvas id="myCanvas" width="200" height="20"style="border:1px solid #d3d3d3;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas> -->
+
     
+    
+    
+            <svg height="200" width="200">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#726ec0;stop-opacity:2" />
+                        <stop offset="100%" style="stop-color:#02002e;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+                <text fill="#ffffff" font-size="45" font-family="Verdana" x="34" y="86">wePro</text>
+    
+            </svg>
+            Copyright &copy; All rights reserved
+    
+            <svg width="100" height="20">
+                <rect width="100" height="20" style="fill:#02002e;;stroke-width:5;stroke:rgb(0,0,0)" />
+                <text fill="#ffffff" font-size="15" font-family="Verdana" x="22" y="15">Awards</text>
+            </svg>
+    
+            <!-- <canvas id="myimage" width="200" height="200" style="border: 1px solid Black;">
+            </canvas> -->
+
+            <canvas id="myCanvas22" width="578" height="400"></canvas>
+
+            <canvas id="kanvasi" width="42" height="42" style="border:1px solid black;"></canvas>
+            
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        // Create gradient
+        var grd = ctx.createRadialGradient(5,5,5,90,70,100);
+        grd.addColorStop(0,"white");
+        grd.addColorStop(1,"navy");
+
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(0,0,200,20);
+
+        // var c = document.getElementById("myCanvas");
+        // var ctx = c.getContext("2d");
+        // ctx.beginPath();
+        // ctx.arc(50, 20, 15, 0, 2 * Math.PI);
+        // ctx.font = "14px Arial";
+        // ctx.fillText("Recognition", 15, 45);
+        // ctx.stroke();
+
+
+        // var c = document.getElementById("myCanvas1");
+        // var ctx = c.getContext("2d");
+
+        // // Create gradient
+        // var grd = ctx.createRadialGradient(50, 50, 25, 100, 50, 150);
+        // grd.addColorStop(0, "navy");
+        // grd.addColorStop(1, "white");
+
+        // // Fill with gradient
+        // ctx.fillStyle = grd;
+        // ctx.fillRect(0, 0, 100, 50);
+
+        // var image = new Image();
+        // image.src = "./assets/images/logo.png";;
+
+        // function draw() {
+        //     var canvas = document.getElementById("myimage");
+        //     var context = canvas.getContext("2d")
+        //     context.drawImage(image, 0, 0, 70, 70);
+        // } // end function draw
+
+        // window.addEventListener("load", draw);
+
+
+
+        var canvas = document.getElementById("myCanvas22")
+        var context = canvas.getContext('2d');
+        var imageObj = new Image();
+
+        imageObj.onload = function() {
+            context.drawImage(imageObj, 69, 50);
+        };
+        imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+
+
+        var c = document.getElementById("kanvasi");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(21,16,15,0,2*Math.PI);
+        ctx.stroke();
+        ctx.font = "15px Arial";
+        ctx.fillText("wepro", 1, 40);
+    </script>
+  </body>
+</html>      
+
+    </script>
+  </body>
+</html>    
+    </script>
+
 </body>
+
 </html>
