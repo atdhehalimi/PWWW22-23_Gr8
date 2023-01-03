@@ -209,8 +209,18 @@ section#testimonials .container {
     display: flex;
     gap: 50px;
     margin-top: 100px;
-    justify-content: center;
+    animation: animation1 2s ease-in 0s normal none;
 }
+
+@keyframes animation1 {
+    0% {
+      opacity: 0;transform: rotate(-540deg) scale(0);transform-origin: 50% 100%;
+    }
+    100% {
+      opacity: 1;transform: rotate(0) scale(1);transform-origin: 50% 100%;
+    }
+    
+  }
 
 section#testimonials .container .test {
     width: 400px;
@@ -478,6 +488,10 @@ section#contact .container .contact-form form textarea{
     background-color: transparent;
     border: 1px solid lightgray;
     margin-top: 10px;
+    resize: vertical;
+    overflow: auto;
+    outline: 1px dashed #02002e;
+    outline-offset: 2px;
 }
 
 section#contact .container .contact-form form h3{
@@ -527,8 +541,7 @@ label {
 }
 
 #contact .container .contact-form form .checkbox {
-    display: flex;
-    gap: 100px;
+    column-count: 2;
 }
 
 footer{

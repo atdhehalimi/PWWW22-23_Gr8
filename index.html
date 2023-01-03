@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  manifest="manifest.appcache">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
             </div>
             <nav>
                 <ul><li><a href="./index.html">Home</a></li></ul>
-                <ul><li><a href="./Employees.html">About</a></li></ul>
+                <ul><li><a href="./employes.html">About</a></li></ul>
                 <ul><li><a href="#services">Services</a></li></ul>
                 <ul><li><a href="./news-events.html">News</a></li></ul>
                 <ul><li><a href="./Awards.html">Awards</a></li></ul>
@@ -108,7 +108,10 @@
                     <img src="./assets/images/statistics/2.jpeg" alt="">
                     <img src="./assets/images/statistics/3.jpeg" alt="">
                     <img src="./assets/images/statistics/4.jpeg" alt="">
-                    <img src="./assets/images/statistics/5.jpg" alt="">
+                    <figure>
+                        <img src="./assets/images/statistics/5.jpg" alt="">
+                        <figcaption>2022</figcaption>
+                    </figure>
                 </div>
                 <div class="images" id="e-comerce">
                     <img src="./assets/images/01.png" alt="">
@@ -320,18 +323,17 @@
     <section id="contact">
         <div class="container">
             <div class="contact-form">
-                <form action="#">
+                <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
                     <h3>Contact Us</h3>
                     <div class="input">
-                        <input type="name" class="name" name="name" placeholder="First Name">
-                        <input type="name" class="name" name="name" placeholder="Last Name">
-                        <input type="name" class="name" name="name" placeholder="Email">
-                        <input type="password" class="pasword" name="password" placeholder="Password">
+                        <input type="text" name="fname" placeholder="Name" id="name" >
+                        <input type="name" name="surname" class="name" name="name" placeholder="Last Name" id="surname">
+                        <input type="Email" id="email" name="email"class="name" name="name" placeholder="Email" id="email">
+                        <input type="password" name="password" placeholder="Password" id="password">
+                        <input type="tel" class="telephone" id="tel" placeholder="Telephone" name="telephone">
                     </div>
                     <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <div class="form-btn">
-                        <button>Send</button>
-                    </div>
+                    <button type="submit">Sumbit</button>
                     <div class="checkbox">
                         <div>
                             <label for="#">A deshironi te merrni email-a tjera?</label>
@@ -385,12 +387,121 @@
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-linkedin"></i>
                 <a href="./assets/pdf/Pershkrimi_Detyra_PWWW_2022_23_1672695171.pdf" target="_blank"><i class="fa-solid fa-file"></i></a>
+
+                <button onclick="getLocation()">Your coordinates are:</button>
+
+                <p id="Test"></p>
             </div>
             <div class="pp">
                 <p style="color: lightgray;font-family:cursive;">Privacy Policy || Terms & Conditions</p>
             </div>
         </div>
     </footer>
+
+
+
+
+    <script>
+        let q = new Date().getHours();
+
+        while(document.readyState === false) {}
+        var colors = ["#ffffff","#F5F5F5","#FAF9F6","#F5F5F5","#f0f8ff"];
+        window.addEventListener("load",function() { setBackground(q) });
+        function setBackground(time) {
+
+
+    switch(time) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+            document.body.style.backgroundColor = colors[0];
+            break;
+        case 4:
+        case 5:
+        case 6:
+            document.body.style.backgroundColor = colors[1];
+            break;
+        case 7:
+        case 8:
+        case 9:
+            document.body.style.backgroundColor = colors[2];
+            break;
+        case 10:
+        case 11:
+        case 12:
+            document.body.style.backgroundColor = colors[3];
+            break;
+        case 13:
+        case 14:
+        case 15:
+            document.body.style.backgroundColor = colors[4];
+            break;
+        case 16:
+        case 17:
+        case 18:
+            document.body.style.backgroundColor = colors[3];
+            break;
+        case 19:
+        case 20:
+        case 21:
+            document.body.style.backgroundColor = colors[2];
+            break;
+        case 22:
+        case 23:
+        case 24:
+            document.body.style.backgroundColor = colors[1];
+            break;
+    }
+    print(t);
+}
+    </script>
+
+
+    <script>
+        function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        let y = document.forms["myForm"]["surname"].value;
+        let f = document.forms["myForm"]["email"].value;
+        let g = document.forms["myForm"]["password"].value;
+        let t = document.forms["myForm"]["telephone"]
+        if (x == "") {
+            alert("Emri duhet shkruar");
+            return false;
+        }else if (y == ""){
+            alert("Mbiemri duhet shkruar");
+            return false;
+        }else if (f == ""){
+            alert("Email duhet shkruar");
+            return false;
+        }else if (f === !(/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.[A-Za-z]{2,4})+$/ || str.length == 0)){ 
+				alert("Must be in example@abc.com format")
+		}else if (g == ""){
+            alert("paswordi duhet shkruar");
+            return false
+        }else if (g < 6){
+            alert("paswordi eshte i vockel")
+            return false
+        }else if(t === NaN || /^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$/){
+            alert("Duhet te perdoni vetem numra dhe te jete ne formatin amerikan")
+            return false
+
+    }
+
+    try{
+        throw "Paswordi eshte i shkurter"
+    }catch(error){
+        if(g < 6)
+        alert("Paswordi duhet te jete me i gjate se 6 shkronja")
+    }
+
+
+
+
+
+    </script>
+
+
 
 
     <script src="app.js"></script>

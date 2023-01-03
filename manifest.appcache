@@ -1,0 +1,11 @@
+CACHE MANIFEST
+#date 03/01/2023
+
+CACHE:
+/style.css
+
+NETWORK:
+*
+
+FALLBACK:
+/index.html
