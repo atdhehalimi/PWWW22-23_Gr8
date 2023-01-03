@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;1,400&family=Nothing+You+Could+Do&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,700;1,500&display=swap');
+
+
+:root{
+    --font-family: 'Playfair Display', serif;
+}
+
 *{
     margin: 0;
     padding: 0;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
 }
 
 
@@ -30,7 +43,8 @@ header .container nav ul li{
 
 header .container nav ul li a{
     text-decoration: none;
-    color: white;
+    color: white;  
+    font-family: var(--font-family);
 }
 
 main{
@@ -53,6 +67,8 @@ main .container h1{
     font-size: 60px;
     width: 500px;
     margin-top: 30px;
+    font-family: var(--font-family);
+    font-weight: 700;
 }
 
 main .container .btn button{
@@ -112,7 +128,7 @@ section#services .container .card i {
 
 section#services .container .card h2{
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 30px;
     transform: all ease 3s;
 }
@@ -139,27 +155,42 @@ section#photos .container .bottom {
     gap: 30px;
 }
 
-section#photos .container .bottom ul li {
-    list-style: none;
-}
 
-section#photos .container .bottom ul li a{
-    text-decoration: none;
+section#photos .container .bottom button{
+    border: 0;
     color: #CCCCCC;
 }
 
-section#photos .container .bottom ul li .active{
+section#photos .container .bottom .active{
     color: black;
     border-bottom: 2px solid black;
 }
 
-section#photos .container .images {
+
+section#photos .container .images-content .images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 0 auto;
     margin-top: 40px;
 }
+
+section#photos .container .images-content .images img{
+    width: 100%;
+}
+
+
+section#photos .container .images-content .images {
+    display: none;
+  } 
+
+  section#photos .container .images-content .active {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+  } 
 
 section#photos .container .button {
     width: 200px;
@@ -192,14 +223,14 @@ section#testimonials .container .test blockquote {
 }
 
 section#testimonials .container .test .author {
-    display: flex;
-    gap: 10px;
 }
 
 section#testimonials .container .test .author img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    float: left;
+    margin-right: 20px;
 }
 
 section#prices .container {
@@ -245,6 +276,8 @@ section#prices .container .price-table .bottom-part .price.bottom{
     justify-content: center;
     color: white;
 }
+
+
 
 section#prices .container .middle {
     padding-bottom: 20px;
@@ -488,6 +521,15 @@ section#contact .container .contact-form form button{
     margin-bottom: 10px;
 }
 
+label {
+    color: lightgray;
+}
+
+#contact .container .contact-form form .checkbox {
+    display: flex;
+    gap: 100px;
+}
+
 footer{
     color: white;
     background-color: #02002e;
@@ -498,6 +540,5 @@ footer .container {
     display: flex;
     justify-content: space-between;
 }
-
 
 
