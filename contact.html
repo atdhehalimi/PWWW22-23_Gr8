@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact || WEPRO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <style>
+        .contact {
+            text-align: center;
+            position: relative;
+            float: left;
+            padding: 1em 1em;
+            background-color: hsla(187, 68%, 60%, 0.712);
+            width: 100%;
+                }
+
+        main {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .container {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #02002e;
+            margin-bottom: 100px;
+        }
+
+        header .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .container nav{
+            display: flex;
+            gap: 20px;
+        }
+
+        header .container nav ul li{
+            list-style: none;
+        }
+
+        header .container nav ul li a{
+            text-decoration: none;
+            color: white;  
+            font-family: var(--font-family);
+        }
+
+        main .container {
+            box-shadow: 10px 10px 5px 0px rgba(56, 55, 55, 0.75);
+        }
+
+
+        #myform input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        .submitButton {
+            color: white;
+            padding-top: 10px;
+            border: none;
+        }
+
+        #submit {
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+
+        input[type=submit]:hover {
+            background-color: #688f5c;
+            cursor: pointer;
+        }
+
+        .contact-us {
+            border-radius: 5px;
+            background-color: #f0f8ff;
+            padding: 10px;
+        }
+
+        .contact-Info {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+        .contact-form {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+        .info-form:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .mailTO {
+            text-align: center;
+            font-size: 1em;
+            text-decoration: none;
+            color: black;
+        }
+
+        .tel {
+            text-align: center;
+            position: relative;
+            margin: 1em;
+
+        }
+
+        .email1 {
+            text-align: center;
+            position: relative;
+            margin: 1em;
+        }
+
+        .location {
+            text-align: center;
+            position: relative;
+            margin: 1em;
+        }
+
+        #canvas {
+            font-size: 2em;
+            margin: 0;
+            padding: 0;
+        }
+
+        .location a {
+            color: black;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .firstname-lastname {
+            display: flex;
+        }
+
+        .firstname {
+            padding-right: 10px;
+            width: 50%;
+        }
+
+        .last-name {
+            padding-left: 10px;
+            width: 50%;
+        }
+
+        abbr {
+            text-decoration: none;
+        }
+
+        #error_message {
+            color: red;
+            font-weight: bold;
+        }
+
+        .phone-time {
+            display: flex;
+        }
+
+        .phone {
+            padding-right: 10px;
+            width: 50%
+        }
+
+        .time {
+            padding-left: 10px;
+            width: 50%
+        }
+
+        .user-location-container {
+            padding: 1em;
+            display: flex;
+            gap: 1em;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #find-location-button {
+            top: 5%;
+            padding: 0.5em;
+            background-color: lightgray;
+            border-radius: 10%;
+        }
+
+        .contact-form {
+            position: relative;
+        }
+
+        #loginform {
+            position: absolute;
+            top: 0;
+            z-index: 200;
+        }
+
+        #show_login {
+            padding: 0.7em 1.2em;
+            margin-bottom: 30px;
+            border: none;
+            box-shadow: 3px 3px 2px 0px rgba(94, 93, 93, 0.75);
+            border-radius: 5px;
+        }
+
+        #loginform {
+            background-color: #02002e;
+            padding: 2em;
+            visibility: hidden;
+            display: none;
+            position: absolute;
+            left: 450px;
+            bottom: 20px;
+
+        }
+
+        #loginform form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+ 
+        }
+
+        #loginform p {
+            font-size: 1.2em;
+            color: white;
+        }
+
+        #loginform form > input {
+            padding: 1em;
+        }
+
+        #dologin {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .radio_butonat {
+            padding: 0.5em;
+        }
+
+        .checkbox {
+            padding-top: 0.5em;
+        }
+
+        footer{
+            color: white;
+            background-color: #02002e;
+            padding: 60px;
+            margin-top: 100px;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    
+    <script>
+        $(document).ready(function() {
+            checkUser();
+            $("#show_login").click(function() {
+                showpopup();
+            });
+            $("#close_login").click(function() {
+                hidepopup();
+            });
+        });
+
+        function showpopup()
+        {
+            $("#loginform").fadeIn(500);
+            $("#loginform").css({"visibility":"visible"});
+        }
+
+        function hidepopup()
+        {
+            $("#loginform").fadeOut(500);
+            $("#loginform").css({"visibility":"hidden","display":"none"});
+        }
+
+        function submitLogin() {
+            const email = $("#email").val();
+            localStorage.setItem("username", email);
+            hidepopup();
+            return true;
+        }
+
+        function checkUser() {
+            const username = localStorage.getItem("username");
+            if (username !== null) {
+                try {
+                    $("#show_login").hide();
+                    $("#current-user").text("Current user " + username);
+                    $("#current-user").show();
+                } catch (err) {
+                    console.log(err.message);
+                }
+            } else {
+                try {
+                    $("#show_login").show();
+                    $("#current-user").hide();
+                } catch (err) {
+                    console.log(err.message);
+                }
+                
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <nav>
+                <ul><li><a href="./index.html">Home</a></li></ul>
+                <ul><li><a href="./employes.html">About</a></li></ul>
+                <ul><li><a href="#services">Services</a></li></ul>
+                <ul><li><a href="./news-events.html">News</a></li></ul>
+                <ul><li><a href="./Awards.html">Awards</a></li></ul>
+                <ul><li><a href="./contact.html">Contact</a></li></ul>
+                <ul><li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li></ul>
+            </nav>
+        </div>
+    </header>
+
+    <main >
+        <div class="contact-us container">
+            <div class="info-form">
+                <div class="contact-Info">
+                    <div class="email1">
+                        <i class="fa-solid fa-envelope" style="width:2em; height: 2em;"></i>
+                        <div>
+                            <h2>Email:</h2>
+                            <p>
+                                <a class="mailTO" href="mailto:someone@example.com"> someone@example.com </a>
+                            </p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tel">
+                        <p>
+                            <i class="fa-solid fa-phone" style="width:2em; height: 2em;"></i>
+                        </p>
+                        <h2>
+                            Telephone:
+                        </h2>
+                        <p>
+                            0113 288 6000
+                        </p>
+                    </div>
+                    <div class="location">
+                        <i class="fa-solid fa-location-pin" style="width:2em; height: 2em;"></i>
+                        <div>
+                            <h2>Location:</h2>
+                            <p><a href="https://www.google.com/maps/place/Statue+of+Bill+Clinton/@42.6629138,21.1655028,13z/data=!4m13!1m7!3m6!1s0x13549ee605110927:0x9365bfdf385eb95a!2sPristina!3b1!8m2!3d42.6629138!4d21.1655028!3m4!1s0x0:0x9f9ca7c7ab182591!8m2!3d42.6540046!4d21.1532146">Prishtine</a>
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="contact-form">
+                    <div class="login">
+                        <p id="current-user"></p>
+                        <input type="button" id="show_login" value="Log In">
+                        <div id = "loginform">
+                            <form method = "post" onsubmit = "return submitLogin()">
+                                <p>Shkruaj emailin dhe fjalekalimin</p>
+                                <input type = "email" id = "email" placeholder = "Email" name = "uid">
+                                <input type = "password" id = "password" name = "upass" placeholder = "Password">
+                                <input type = "submit" id = "dologin" value = "Login">
+                            </form>
+                        </div>
+                    </div>
+                    <form id="myform" onsubmit="return validate()">
+                        <div class="firstname-lastname">
+                            <div class="firstname">
+                                <label>Emri</label>
+                                <input type="text" required placeholder="Name" id="name">
+                            </div>
+                            <div class="last-name">
+                                <label>Mbiemri</label>
+                                <input type="text" required id="lastname" name="lastname" placeholder="Surname">
+                            </div>
+                        </div>
+                        <label>Email</label>
+                       <input type="text" id="contact_email" required name="email" placeholder="someone@example.com">
+                        <!--ose email-->
+                        <div class="phone-time">
+                            <div class="phone">
+                                <label>Tel:</label>
+                                <input type="text" required id="phone" name="phone" placeholder="*******" pattern="[0-9]{9}">
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container ">
+            <div class="copyright">
+                <p>Copyright &copy; All rights reserved</p>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+
+            </div>
+            <div class="pp">
+                <p style="color: lightgray;font-family:cursive;">Privacy Policy || Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./jquery.js"></script>
+
+    <script>
+        var g = document.getElementById("canvas");
+        var kontakt = g.getContext("2d");
+        var gradient = kontakt.createLinearGradient(1, 1, g.width, 1);
+        gradient.addColorStop("0", "black");
+        gradient.addColorStop("0.5", "blue");
+        gradient.addColorStop("1.0", "black");
+        kontakt.font = "1em sans-serif";
+        kontakt.strokeStyle = gradient;
+        kontakt.strokeText("Kontakti", 10, 50);
+
+        var text = document.getElementById('intro');
+        var result = text.innerHTML.replace(/w/gi, 'ë');
+        text.innerHTML = result;
+
+        function validate() {
+            const emailValid = (email) => {
+                const emailRegex = /^([A-Za-z0-9-.])+@([A-Za-z0-9-.])+.([A-Za-z]{2,4})$/;
+                return emailRegex.test(email);
+            }
+            const urlValid = (link) => {
+                const URLRegex = (/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+                return URLRegex.test(link);
+            }
+            const nameValid = (name) => {
+                const nameRegex = /[A-Za-z]/;
+                return nameRegex.test(name);
+            }
+            const lastnameValid = (lastname) => {
+                const lastnameRegex = /[A-Za-z]/;
+                return lastnameRegex.test(lastname);
+            }
+
+            const messageValid = (message) => {
+                const messageRegex = /\s/g;
+                const result = message.trim().match(messageRegex);
+                return result === null || result.length < 50;
+            }
+
+            var name = document.getElementById('name');
+            var lastname = document.getElementById('lastname');
+            var email = document.getElementById('contact_email');
+            var message = document.getElementById("message");
+            console.log(!nameValid(name.value));
+            if (!nameValid(name.value)) {
+                alert("Ju lutem shkruani nje emer valid.");
+                name.focus();
+                return false;
+            }
+            if (!lastnameValid(lastname.value)) {
+                alert("Ju lutem shkruani nje mbiemer valid.");
+                lastname.focus();
+                return false;
+            }
+            if (!emailValid(email.value)) {
+                console.log(email);                console.log(email.value);
+                alert("Ju lutem shkruani email-in valid.");
+                email.focus();
+                return false;
+            }
+            if (!urlValid(link.value)) {
+                alert("Ju lutem shkruani nje URL valide");
+                link.focus();
+                return false;
+            }
+            if (!messageValid(message.value)) {
+                alert("Ju lutem shkruani te pakten 50 fjale. Ju keni shkruar " + (message.innerHTML.match(messageRegex)).length) + " fjale";
+                message.focus();
+                return false;
+            }
+
+            alert("Forma juaj eshte pranuar");
+            return true;
+        }
+
+    </script>
+
+    <script>
+            $(document).ready(function()
+            {
+            $("#show_login").click(function(){
+            showpopup();
+            });
+            $("#close_login").click(function(){
+            hidepopup();
+            });
+            });
+
+            function showpopup()
+            {
+            $("#loginform").fadeIn();
+            $("#loginform").css({"visibility":"visible","display":"block"});
+            }
+
+            function hidepopup()
+            {
+            $("#loginform").fadeOut();
+            $("#loginform").css({"visibility":"hidden","display":"none"});
+            }
+    </script>
+
+
+</body>
+
+</html>
