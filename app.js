@@ -4,7 +4,7 @@ const articles = document.querySelectorAll(".images");
 
 container.addEventListener("click", function (e){
     var id = e.target.dataset.id;
-    if(id == id){
+    if(id){
         btns.forEach(function (btn){
             btn.classList.remove("active");
             e.target.classList.add("active");
@@ -13,7 +13,7 @@ container.addEventListener("click", function (e){
             article.classList.remove("active");
         })
         const element = document.getElementById(id)
-        element.classList.add("active")
+        element.classList.add("active");
     }
 });
 
