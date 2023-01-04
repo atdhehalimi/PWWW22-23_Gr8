@@ -309,7 +309,6 @@
         </div>
     </section>
 
-
     <section id="iframes">
         <div class="container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/wlHrSZ7BVFI?start=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
@@ -334,6 +333,17 @@
     <footer>
         Copyright &copy; All rights reserved
     </footer>
+
+    <script>
+        let options = {
+            "name": "Atdhe",
+            "age": 24,
+            "jobs": ["web dev", "back-end", "front-end"]
+        }
+        let str = JSON.stringify(options)
+
+        sessionStorage.setItem("Personi", str)
+    </script>
     
 </body>
 </html>
